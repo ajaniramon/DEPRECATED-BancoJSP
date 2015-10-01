@@ -9,5 +9,8 @@
             <file>file:/C:/Users/alumno/Documents/NetBeansProjects/DWS04/web/META-INF/context.xml</file>
             <file>file:/C:/Users/alumno/Documents/NetBeansProjects/DWS04/web/insert.jsp</file>
         </group>
+        <group name="NetBeansProjects">
+            <file>file:/C:/Users/alumno/Documents/NetBeansProjects/DWS-Banco-JSP/web/findAll.jsp</file>
+        </group>
     </open-files>
 </project-private>

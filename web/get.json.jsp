@@ -10,10 +10,11 @@
     EntidadBancaria entidadBancaria = entidadBancariaDAO.get(Integer.parseInt(idEntidadBancaria));
 
 %>
-{"idEntidadBancaria":"<%=entidadBancaria.getIdEntidadBancaria()%>",
-"nombre":"<%=entidadBancaria.getNombre()%>",
-"codigoEntidad":"<%=entidadBancaria.getCodigoEntidad()%>",
-"fechaCreacion":"<%=entidadBancaria.getFechaCreacion()%>",
-"direccion":"<%=entidadBancaria.getDireccion()%>",
-"cif":"<%=entidadBancaria.getCif()%>"
+{
+    "idEntidadBancaria":"<%=entidadBancaria.getIdEntidadBancaria()%>",
+    "nombre":"<%=entidadBancaria.getNombre()%>",
+    "codigoEntidad":"<%=entidadBancaria.getCodigoEntidad()%>",
+    "fechaCreacion":"<%=entidadBancaria.getFechaCreacion()%>",
+    "direccion":"<%=entidadBancaria.getDireccion()%>",
+    "cif":"<%=entidadBancaria.getCif()%>"
 }
