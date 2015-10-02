@@ -1,20 +1,12 @@
-<%-- 
-    Document   : index
-    Created on : 30-sep-2015, 8:40:20
-    Author     : alumno
---%>
-
-<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.fpmislata.banco.business.domain.EntidadBancaria"%>
-<%@page import="java.util.List"%>
 <%@page import="java.util.List"%>
 <%@page import="com.fpmislata.banco.persistence.dao.impl.jdbc.EntidadBancariaDAOImplJDBC"%>
 <%@page import="com.fpmislata.banco.persistence.dao.EntidadBancariaDAO"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="application/json" pageEncoding="UTF-8"%>
 <%
     EntidadBancariaDAO entidadBancariaDAO = new EntidadBancariaDAOImplJDBC();
-    List<EntidadBancaria> entidades = entidadBancariaDAO.findAll();
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    String parameter = request.getParameter("nombre");
+    List<EntidadBancaria> entidades = entidadBancariaDAO.findByNombre(parameter);
     int contador = 0;
 %>
 [
@@ -23,7 +15,6 @@
     for(EntidadBancaria entidadBancaria: entidades) {
     contador++;%>
 {
-
     "idEntidadBancaria":<%=entidadBancaria.getIdEntidadBancaria()%>,
     "nombre":"<%=entidadBancaria.getNombre()%>",
     "codigoEntidad":<%=entidadBancaria.getCodigoEntidad()%>,
@@ -34,6 +25,5 @@
 <% if((contador) < entidades.size()){ %>
     ,
 <% } %>
-
 <% } %>
 ]
