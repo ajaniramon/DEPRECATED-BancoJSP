@@ -6,11 +6,19 @@
 
 var app = angular.module("app", []);
 app.controller("IndexController", IndexController);
-function IndexController($scope) {
+function IndexController($scope,$http,$log) {
     $scope.mensaje = "hola mundo";
-    $scope.entidadesBancarias =
-            [{"idEntidadBancaria": 4, "nombre": "Bonkia", "codigoEntidad": 11, "fechaCreacion": "2015-02-01", "direccion": "Calle falsa 123", "cif": "32894u38493A"}, {"idEntidadBancaria": 9, "nombre": "Banco", "codigoEntidad": 1243, "fechaCreacion": "2015-06-06", "direccion": "Calle mslata", "cif": "cif56"}];
-    $scope.mensaje2 = "La policía tortura y asesina.";
+
+   
     
+  $http({
+    method: 'GET', 
+    url: 'findall.json.jsp'
+  }).success(function(data, status, headers, config) {
+      $scope.entidadesBancarias=data;
+  }).error(function(data, status, headers, config) {
+      alert("Ha fallado la petición. Estado HTTP:"+status);
+  });
+    
+ 
 }
-app.controller("IndexController", IndexController);

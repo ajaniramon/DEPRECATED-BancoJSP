@@ -52,7 +52,7 @@
             <% for (EntidadBancaria entidadBancaria : entidades) {%>
             <tr>
 
-                <td> <a href="get.jsp?idEntidadBancaria=<%=entidadBancaria.getIdEntidadBancaria()%>">
+                <td> <a href="get.html?idEntidadBancaria=<%=entidadBancaria.getIdEntidadBancaria()%>">
                         <%=entidadBancaria.getNombre()%> </a></td>
                 <td> <a class="button" href="delete.jsp?idEntidadBancaria=<%=entidadBancaria.getIdEntidadBancaria()%>">
                         Borrar</a> </td>

@@ -14,32 +14,23 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body ng-controller="IndexController">
-        <div><h1> {{mensaje}}</h1></div>
-        <div><h1> {{mensaje}}</h1></div>
-        <div><h1> {{mensaje}}</h1></div>
-        <div><h1> {{mensaje}}</h1></div>
-        <div><h1> {{mensaje}}</h1></div>
-        <input type="text" ng-model="mensaje">
-        <table border='1' ng-hide="mensaje==='pepe'">
+           
+      <table border='1'>
             <tr>
                 <td class='bold'>idEntidadBancaria</td>
                 <td class='bold'>Nombre</td>
-                <td class='bold'>Código Entidad</td>
-                <td class='bold'>Fecha creación</td>
-                <td class='bold'>Dirección</td>
-                <td class='bold'>CIF</td>
             </tr>
 
-            <tr ng-repeat="entidadBancaria in entidadesBancarias| orderBy: 'nombre'">
-                <td>{{entidadBancaria.idEntidadBancaria}}  </td>
+            <tr ng-repeat="entidadBancaria in entidadesBancarias">
+                <td><a href="get.html?idEntidadBancaria={{entidadBancaria.idEntidadBancaria}}">{{entidadBancaria.idEntidadBancaria}} </a></td>
                 <td>{{entidadBancaria.nombre}}  </td>
-                <td>{{entidadBancaria.codigoEntidad}}  </td>
-                <td>{{entidadBancaria.fechaCreacion}}  </td>
-                <td>{{entidadBancaria.direccion}}  </td>
-                <td>{{entidadBancaria.cif}}</td>
+
             </tr>
 
         </table>
-        <h2> {{mensaje2}} </h2>
+     
+      
+      
+
     </body>
 </html>

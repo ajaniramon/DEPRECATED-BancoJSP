@@ -21,6 +21,7 @@
         <title>GET</title>
     </head>
     <body>
+        
         <table border="1">
             <tr>
                 <td>Nombre</td>
@@ -38,5 +39,6 @@
             </tr>
 
         </table>
+       
     </body>
 </html>
