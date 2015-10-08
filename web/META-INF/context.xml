@@ -8,9 +8,9 @@
         url="jdbc:mysql://localhost:3306/banco"
         username="root"
         password="root"
-        maxActive="100"
+        maxTotal="300"
         maxIdle="30"
-        maxWait="10000"
+        maxWaitMillis="10000"
         validationQuery="SELECT 1 FROM dual"
     />
 </Context>

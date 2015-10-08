@@ -7,10 +7,6 @@
 var app = angular.module("app", []);
 app.controller("IndexController", IndexController);
 function IndexController($scope,$http,$log) {
-    $scope.mensaje = "hola mundo";
-
-   
-    
   $http({
     method: 'GET', 
     url: 'findall.json.jsp'
